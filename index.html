@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Community</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+
+
+            <a class="navbar-brand" href="#">
+                <img src="icon.svg" alt="Bootstrap" width="30" height="24">
+            </a>
+
+            <a class="navbar-brand" href="index.html"><b>Sports Community</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Register/Login
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login page\login.html" target="main">Login</a></li>
+                            <li><a class="dropdown-item" href="login page\registration.html" target="main">Register</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search sports......"
+                        aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="slideshow-container">
+        <div class="slides">
+            <img src="image1.jpg" alt="Image 1" class="slide">
+            <img src="image2.avif" alt="Image 2" class="slide zoomed">
+            <img src="image3.jpg" alt="Image 3" class="slide">
+        </div>
+        </div>
+
+        <div class="container">
+            <!-- Introduction -->
+            <section id="introduction">
+                <h2>Welcome to the Sports Community! 🙂</h2>
+                <p>Our app aims to bring sports lovers in the local area together based on their interests and location.
+                    Whether you're looking to form a team, find local sports events, or simply connect with like-minded
+                    individuals, you've come to the right place.</p>
+                <p>We believe that sports not only promote physical fitness but also foster a sense of community and
+                    camaraderie. Through our platform, we strive to make it easier for you to pursue your passion for
+                    sports and build meaningful connections with others.</p>
+                <div class="search-box">
+                    <!-- <input type="search" placeholder="Search for sports.."><br>
+            <button type="submit">Submit</button> -->
+                </div>
+            </section>
+
+            <!-- Features -->
+            <section id="features">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Register and create your profile</li>
+                    <li>Search and connect with other sports enthusiasts in your area</li>
+                    <li>Form sports teams based on your interests</li>
+                    <li>Discover local sports events and activities</li>
+                    <li>Stay updated with notifications and alerts</li>
+                </ul>
+            </section>
+
+
+
+            <!-- Google Maps Integration -->
+            <section id="map">
+                <h2>Find Sports Activities Near You</h2>
+                <div id="map"></div>
+            </section>
+
+            <!-- Join Us -->
+            <section id="join-us">
+                <h2>Join Us Today!</h2>
+                <p>Ready to take your love for sports to the next level? Sign up now and become part of our growing
+                    community!</p>
+                <a href="login page\registration.html" class="button">Register</a>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <p id="copyright">&copy; 2024 Sports Community. All rights reserved.</p>
+                <p id="developer">Contact Developer : sjorasiya665@gmail.com</p>
+            </div>
+        </footer>
+
+        <!-- Google Maps API Script (replace YOUR_API_KEY with your actual API key) -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+        <script>
+            // Initialize Google Map
+            function initMap() {
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    center: { lat: -34.397, lng: 150.644 },
+                    zoom: 8
+                });
+            }
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
